@@ -8,7 +8,6 @@ This is a [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) plugin that allows 
 
 ## Installation
 
-```
 
 ### Using [vundle](https://github.com/gmarik/vundle)
 
