@@ -34,7 +34,7 @@ $ vim-flavor test t/
 
 ### TODO
 
-* implement `gf` to jump to the class definition
+* implement `gf` jump to the class definition
 
 ## License
 
