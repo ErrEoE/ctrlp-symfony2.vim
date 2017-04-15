@@ -83,6 +83,24 @@ fun! symfony#get_service_class(id, services)
     return class
 endf
 
+fun! symfony#get_route(...)
+    let l:route = {}
+    let l:results = split(symfony#command('debug:route --show-controllers'),'\n')
+
+    " Remove the first and the last elements
+    call remove(l:results, 0, 2)
+    call remove(l:results, -1)
+
+    for l:item in l:results
+        let l:row = split(l:item)
+        if len(l:row) >= 4
+            let l:route[l:row[0]] = l:row[5]
+        endif
+    endfor
+
+    return l:route
+endf
+
 fun! symfony#composer_find_file(name)
     let autoload_file = findfile('vendor/autoload.php', '.;')
 
